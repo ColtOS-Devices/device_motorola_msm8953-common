@@ -77,4 +77,20 @@
    <string name="touchscreen_gesture_haptic_feedback">Retorno tátil</string>
    <string name="touchscreen_gesture_haptic_feedback_summary">Vibrar quando um gesto for detectado</string>
    
+    <string name="screen_gestures_panel_summary" translatable="false">Motorola Gestos e Extras</string>
+    <string name="moto_gestures_panel_title">Moto Extras</string>
+   
+    <!-- Kcal -->
+    <string name="kcal_title">Calibrar Cores</string>
+    <string name="kcal_summary">Calibrar cores da tela</string>
+    <string name="kcal_enabled_title">Habilitar KCAL</string>
+    <string name="kcal_enabled_summary">Habilitar ajusde de cores</string>
+    <string name="kcal_red">Vermelho</string>
+    <string name="kcal_green">Verde</string>
+    <string name="kcal_blue">Azul</string>
+    <string name="kcal_saturation">Saturação</string>
+    <string name="kcal_contrast">Contraste</string>
+    <string name="menu_reset">Reiniciar</string>
+    <string name="kcal_color_temp">Temperatura da Cor (K)</string>
+   
 </resources>

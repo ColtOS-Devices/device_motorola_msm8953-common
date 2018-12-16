@@ -27,7 +27,9 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.moto.actions.actions.Constants;
+import com.moto.actions.DisplayCalibration;
+//import com.moto.actions.util.FileUtils;
+//import com.moto.actions.actions.Constants;
 import com.moto.actions.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -39,17 +41,11 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(TAG, "Booting");
-
+        context.startService(new Intent(context, ServiceWrapper.class));
+            DisplayCalibration.restore(context);
         if (intent.getAction() != null && !intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
             return;
         }
-
-        // Restore nodes to saved preference values
-        for (String pref : Constants.sPrefKeys) {
-             Constants.writePreference(context, pref);
-        }
-
-        context.startService(new Intent(context, ServiceWrapper.class));
     }
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
