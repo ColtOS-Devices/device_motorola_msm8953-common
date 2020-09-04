@@ -11,10 +11,10 @@ get_prop(system_app, hwrev_prop)
 # Battery Health
 r_dir_file(system_app, sysfs_battery_supply);
 
-
-
-
-
+dontaudit system_app {
+  apex_service
+  system_suspend_control_service
+}:service_manager find;
 
 #Kcal
 type sysfs_kcal, fs_type, sysfs_type;
