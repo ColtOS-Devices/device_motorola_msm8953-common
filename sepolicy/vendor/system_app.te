@@ -4,3 +4,8 @@ allow system_app sysfs_homebutton:file { getattr open };
 
 get_prop(system_app, vendor_fm_prop)
 get_prop(system_app, hwrev_prop)
+
+#Kcal
+type sysfs_kcal, fs_type, sysfs_type;
+allow system_app sysfs_kcal:dir search;
+allow system_app sysfs_kcal:file rw_file_perms;
